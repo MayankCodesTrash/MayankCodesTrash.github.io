@@ -3,6 +3,7 @@
 import { MadeWithDyad } from "@/components/made-with-dyad";
 import FloatingNavBar from "@/components/FloatingNavBar";
 import HeroSection from "@/components/HeroSection";
+import HistoryCard from "@/components/HistoryCard"; // Import the new component
 
 const Index = () => {
   return (
@@ -37,6 +38,33 @@ const Index = () => {
                 Trace Johnston's evolution from a small farming community to a thriving modern town, marked by significant developments and a spirit of innovation.
               </p>
             </div>
+          </div>
+        </section>
+
+        {/* New Historical Snapshots Section */}
+        <section className="bg-card/90 backdrop-blur-sm rounded-xl shadow-2xl p-8 md:p-12 mb-16 border border-border">
+          <h2 className="text-4xl md:text-5xl font-serif text-primary mb-6 text-center leading-tight">
+            Historical Snapshots
+          </h2>
+          <p className="text-lg md:text-xl font-sans text-foreground mb-8 text-center max-w-3xl mx-auto">
+            Take a glimpse into pivotal moments and iconic scenes from Johnston's past.
+          </p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <HistoryCard
+              imageSrc="/historic-building.jpg"
+              title="The Old Mill"
+              description="A cornerstone of early industry, the old mill powered the town's growth and served as a community hub."
+            />
+            <HistoryCard
+              imageSrc="/old-farm.jpg"
+              title="Pioneer Homesteads"
+              description="Life on the prairie was challenging but rewarding, with families building their futures from the ground up."
+            />
+            <HistoryCard
+              imageSrc="/community-gathering.jpg"
+              title="Town Gatherings"
+              description="From harvest festivals to town hall meetings, community spirit has always been at the heart of Johnston."
+            />
           </div>
         </section>
 
